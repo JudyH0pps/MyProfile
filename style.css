@@ -10,6 +10,7 @@
     --icon1: #dfa767;
     --icon2: #5d7de4;
     --icon3: #dc93df;
+    --icon4: #86db6c;
 }
 
 body{
@@ -24,11 +25,11 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-track{
-    background: #1e1e24;
+    background: #ffffff;
 }
 
 body::-webkit-scrollbar-thumb{
-    background: #77d1d4;
+    background: #77b2d4;
 }
 
 main{
@@ -74,26 +75,11 @@ main{
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
-    color: var(--text-secondary);
 }
-
-
 
 .nav-link svg {
     min-width: 2rem;
     margin: 0 1.5rem;
-}
-
-.fa-1{
-    color: var(--icon1);
-}
-
-.fa-2{
-    color: var(--icon2);
-}
-
-.fa-3{
-    color: var(--icon3);
 }
 
 .logo{
@@ -118,6 +104,10 @@ main{
     font-size: 1.5rem;
     margin:0;
     padding: 0;
+}
+
+.link-text{
+    color: var(--text-secondary);
 }
 
 .logo svg{
@@ -164,6 +154,10 @@ main div h1::after{
 
 #experience h1::after{
     background: var(--icon3);
+}
+
+#contact h1::after{
+    background: var(--icon4);
 }
 
 h1{
@@ -248,7 +242,8 @@ p{
         display: none;
     }
 
-    .initial{
+    .link-text{
         display: none;
     }
+    
 }
