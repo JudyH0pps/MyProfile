@@ -247,4 +247,8 @@ p{
     .big-size-logo{
         display: none;
     }
+
+    .initial{
+        display: none;
+    }
 }
