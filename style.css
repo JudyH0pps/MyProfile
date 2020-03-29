@@ -6,6 +6,9 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 0.3s;
+    scroll-behavior: smooth;
+    --icon-one: #dfa767;
+    --icon-two: #5d7de4;
 }
 
 body{
@@ -24,12 +27,12 @@ body::-webkit-scrollbar-track{
 }
 
 body::-webkit-scrollbar-thumb{
-    background: #c577d4;
+    background: #77d1d4;
 }
 
 main{
     margin-left: 5rem;
-    padding: 1rem;
+    padding: 0;
 }
 
 .navbar{
@@ -83,12 +86,12 @@ main{
     margin: 0 1.5rem;
 }
 
-.fa-primary{
-    color: #71b4eb;
+.fa-1{
+    color: var(--icon-one);
 }
 
-.fa-secondary{
-    color: #3b62cc;
+.fa-2{
+    color: var(--icon-two);
 }
 
 .fa-primary,
@@ -121,6 +124,49 @@ main{
 .logo-text {
     text-align: center;
 }
+
+div{
+    padding: 1rem;
+    height: 100vh;
+
+}
+
+#top-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#about h1::after{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 70px;
+    margin: 5px auto;
+    background: var(--icon-one);
+}
+
+#skills h1::after{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 70px;
+    margin: 10px auto;
+    background: var(--icon-two);
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+}
+
+p{
+    text-align: center;
+}
+
+
 
 /* 큰화면 */
 @media only screen and (min-width: 600px){
