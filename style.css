@@ -111,7 +111,7 @@ main{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    margin:0;
+    margin:1.5rem 0;
     padding: 0;
 }
 
@@ -137,7 +137,7 @@ main div h1::after{
     content: "";
     height: 2px;
     width: 70px;
-    margin: 10px auto;
+    margin: 7px auto 10px;
 }
 
 main > div{
@@ -172,6 +172,7 @@ main > div{
 h1{
     text-align: center;
     margin: 0;
+    margin-bottom: 1rem;
 }
 
 p{
