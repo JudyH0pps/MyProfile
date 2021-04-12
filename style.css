@@ -1,8 +1,9 @@
-:root{
+:root {
     font-size: 16px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
+    --text-info: #726f6f;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 0.3s;
@@ -13,31 +14,31 @@
     --icon4: #86db6c;
 }
 
-body{
+body {
     color: black;
     background-color: white;
     margin: 0;
     padding: 0;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
     background: #ffffff;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background: #77b2d4;
 }
 
-main{
+main {
     margin-left: 5rem;
     padding: 0;
 }
 
-.navbar{
+.navbar {
     width: 5rem;
     height: 100vh;
     position: fixed;
@@ -45,9 +46,9 @@ main{
     transition: width 200ms ease;
 }
 
-.navbar-nav{
+.navbar-nav {
     list-style: none;
-    padding: 0; 
+    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -55,7 +56,7 @@ main{
     height: 100%;
 }
 
-.nav-item{
+.nav-item {
     width: 100%;
 }
 
@@ -83,7 +84,7 @@ main{
     margin: 0 1.5rem;
 }
 
-.logo{
+.logo {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -95,44 +96,46 @@ main{
     width: 100%;
 }
 
+.info {
+    color: var(--text-info);
+}
+
 .initial,
-.link-text::first-letter{
+.link-text::first-letter {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
     color: var(--text-secondary);
     font-size: 1.5rem;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
-.strong{
+.strong {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    margin:1.5rem 0;
+    margin: 1.5rem 0;
     padding: 0;
 }
 
-
-
-.link-text{
+.link-text {
     color: var(--text-secondary);
 }
 
-.logo svg{
+.logo svg {
     transform: rotate(0deg);
     transition: transform var(--transition-speed);
 }
 
 .logo-text {
     text-align: center;
-    margin-left: 2rem;
+    margin-left: 1rem;
     display: none;
 }
 
-main div h1::after{
+main div h1::after {
     display: block;
     content: "";
     height: 2px;
@@ -140,7 +143,7 @@ main div h1::after{
     margin: 7px auto 10px;
 }
 
-main > div{
+main > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,72 +152,93 @@ main > div{
     min-height: 100vh;
 }
 
-#top-page{
+#top-page {
     justify-content: center;
 }
 
-#about h1::after{
+#about h1::after {
     background: var(--icon1);
 }
 
-#skills h1::after{
+#skills h1::after {
     background: var(--icon2);
 }
 
-#experience h1::after{
+#experience h1::after {
     background: var(--icon3);
 }
 
-#contact h1::after{
+#contact h1::after {
     background: var(--icon4);
 }
 
-h1{
+h1 {
     text-align: center;
     margin: 0;
     margin-bottom: 1rem;
 }
 
-p{
+p {
     text-align: center;
 }
 
-.profile{
+.profile {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.profile-img{
+.profile-img {
     width: 50%;
     max-width: 14rem;
 }
 
+.skill-icon {
+    height: 150px;
+    width: 150px;
+    margin: 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-icon p {
+    margin: 0;
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 /* 큰화면 */
-@media only screen and (min-width: 600px){
-    .navbar{
-        top:0;
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
         width: 5rem;
         height: 100vh;
     }
 
-    .navbar:hover{
+    .navbar:hover {
         width: 13rem;
     }
 
-    .navbar:hover .link-text{
+    .navbar:hover .link-text {
         display: inline;
         transition: opacity var(--transition-speed);
     }
 
-    .navbar:hover .logo-text{
+    .navbar:hover .logo-text {
         display: inline;
     }
 
-    .navbar:hover .initial{
+    .navbar:hover .initial {
         display: none;
     }
 
-    .small-size-logo{
+    .small-size-logo {
         display: none;
     }
 
@@ -223,18 +247,18 @@ p{
     }
 
     .initial,
-    .link-text{
-        margin-left:2rem;
+    .link-text {
+        margin-left: 2rem;
     }
 
-    .link-text{
+    .link-text {
         display: none;
     }
 }
 
 /* 작은 화면 */
-@media only screen and (max-width: 600px){
-    .navbar{
+@media only screen and (max-width: 600px) {
+    .navbar {
         bottom: 0;
         width: 100vw;
         height: 5rem;
@@ -244,7 +268,7 @@ p{
         flex-direction: row;
     }
 
-    .logo{
+    .logo {
         /* display: none; */
         margin: 0;
     }
@@ -253,16 +277,15 @@ p{
         justify-content: center;
     }
 
-    main{
+    main {
         margin: 0;
     }
 
-    .big-size-logo{
+    .big-size-logo {
         display: none;
     }
 
-    .link-text{
+    .link-text {
         display: none;
     }
-    
 }
